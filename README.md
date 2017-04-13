@@ -1,7 +1,10 @@
+
 在yii2 中利用yii\filters\VerbFilter简单的防止前台不停的点击请求按钮
+====
 
 首先在你的models下新建一个OrderFilter文件,继承yii\base\ActionFilter
-
+-------  
+```php
 class OrderFilter extends ActionFilter
 {
     public function beforeAction($action)
@@ -26,9 +29,11 @@ class OrderFilter extends ActionFilter
         return parent::beforeAction($action);
     }
 }
+```
 
 然后再你控制的behaviors配置上
-
+-----
+```php
    return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -42,4 +47,4 @@ class OrderFilter extends ActionFilter
                 'class' => 'backend\models\OrderFilter',
             ],
       ];
-
+```
