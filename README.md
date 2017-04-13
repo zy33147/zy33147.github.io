@@ -31,7 +31,7 @@ class OrderFilter extends ActionFilter
 }
 ```
 
-然后再你控制的behaviors配置上
+然后再你控制器的behaviors配置上
 -----
 ```php
    return [
